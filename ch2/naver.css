@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+/* html, body {
+    margin: 0;
+    padding: 0;
+} */
+
+header {
+    height: 170px;
+}
+
+nav {
+    position: relative;
+    z-index: 100;
+    height: 46px;
+    border-top: 1px solid #f1f3f6;
+    background: #fff;
+}
+
+/* 선택자 (selector) */
+.center-align {
+    margin: 0 auto; 
+    width: 1080px;
+}
+ 
+#header-search > a {
+    text-decoration: none;
+}
+
+#header-search {
+    clear: both;
+}
+
+#header-search h1 {  /* >표시는 div 자식인 h1태그를 선택 한다 */ 
+    display: inline-block;
+    width: 198px; /* 이미지 스프라이트를 사용 하면 width, height를 잘 맞춰서 원하는 이미지 만 나올수 있도록 조절해준다. */
+    height: 48px;
+    background-image: url(./sp_search.png);
+    background-position: -4px -4px; /* - 왼쪽 + 오른쪽 */
+    background-repeat: no-repeat; /* 백그라운드 이미지 공간보다 태그 공간이 넓을 경우 남은 공간을 백그라운드 이미지로 채우는걸 막는다. */
+    /* background: url(./sp_search.png) -4px -10px no-repeat; image,position,repeat를 한번에 작성 */
+    vertical-align: middle;
+    position: relative;
+    top: -8px;
+
+}
+
+#header-search  h1 span {
+    display: none;
+    /* 위 text-indent, overflow 대신 display none으로 처리 해도 된다.
+    * dispaly none은 스크린리더에 읽히지 않기 때문에, 웹접근성(스크린리더) 때문에 추후 위 방법등을 이용하여 처리 해야 한다. */
+    background: url(./sp_search.png) -4px -10px no-repeat;
+}
+
+/* #header-center h1 { 
+    자손 선택 하기
+} */
+
+#header-search fieldset {
+    margin-left: 15px;
+    /* padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 0; */
+    padding: 12px 0 12px 10px;
+    border: 2px solid #03cf5d; /* hex */
+    display: inline-block;
+    width: 521px;
+    height: 49px;
+    vertical-align: middle;
+    position: relative; /* 현재 위치 static 기준 */
+}
+
+#header-search fieldset input {
+    display: inline-block;
+    width: 405px;
+    height: 23px;
+    padding: 0;
+    border: none;
+    outline: none;
+    vertical-align: top;
+}
+
+#header-search fieldset button {
+    width: 49px;
+    height: 47px;
+    border: 0;
+    padding: 0;
+    background-color: #03cf5d;
+    position: absolute; /* 현재 위치 컨테이닝 블럭 기준 */
+    right: 0;
+    top: 0;
+    
+}
+
+#search-img{
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    background-position: -3px -60px;
+    background-image: url(./sp_search.png);
+    background-repeat: no-repeat;
+    /* margin: 14px; */
+}
+
+nav ul {
+    margin: 0;
+    border: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li span:first-child {
+    display: inline-block;
+    height: 16px;
+    background-image: url(./sp_nav_v200110.png);
+    background-repeat: no-repeat;
+    margin-left: 14px;
+
+}
+
+
+/* #header-search h2 {
+    display: none;
+} */
+
+nav li:first-child span.mail-img {
+    width: 25px;
+    background-position: -294px -156px;
+    margin-left: 0;
+
+}
+
+/* #mail-img {
+    background-image: url(./sp_nav_v200110.png);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 16px;
+    background-position: -294px -156px;
+} */
+
+nav li:nth-child(2) span:first-child { /* child는 추후 유지보수 하기 불편하기 때문에 class를 이용하는게 좋다. */
+    width: 27px;
+    background-position: -234px -234px;
+}
+
+nav li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -50px -182px;
+}
+
+nav li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -128px -130px;
+}
+
+nav li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -111px -260px;
+}
+
+nav li:nth-child(6) span:first-child {
+    width: 25px;
+    background-position: -294px -208px;
+
+}
+
+nav li:last-child span:first-child {
+    margin-top: -1px;
+    width: 32px;
+    background-position: -200px -182px;
+
+}
+
+#header-top {
+    float: right;
+}
+
+#header-top span {
+    color: #888;
+    letter-spacing: -1px;
+    font-size: 11px;
+    line-height: 22px;
+}
+
+
+.blind {  
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
